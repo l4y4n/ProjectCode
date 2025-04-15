@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="eng" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>كاشف الاكتئاب</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>كاشف الاكتئاب</h1>
+    <input type="text" id="sentence" placeholder="...أدخل جملة">
+    <br>
+    <button onclick="analyzeSentence()">تحليل</button>
+    <p id="result"></p>
+    <br>
+    <script src="/static/js/script.js"></script>
+  
+    <a href="{{ url_for('instructions') }}"><button>تعليمات</button></a>
+
+</body>
+</html>

@@ -80,15 +80,15 @@ class TfidfVectorizerWrapper(BaseEstimator, TransformerMixin):
 try:
     # First try loading with fixed tokenizer
     sys.modules['__main__'].arabic_tokenizer = arabic_tokenizer
-    ensemble = joblib.load(r'C:\\Users\\Lenovo\\Desktop\\idk\\full_ensemble.pkl')
+    ensemble = joblib.load(r'C:\\Users\\Lenovo\\Desktop\\GP\\full_ensemble.pkl')
 except Exception as e:
     print(f"Model load failed: {e}")
     try:
         # Fallback to manual component loading
         from sklearn.ensemble import VotingClassifier
-        logreg = joblib.load(r'C:\\Users\\Lenovo\\Desktop\\idk\\Logical_Regresion.pkl')
-        svm = joblib.load(r'C:\\Users\\Lenovo\\Desktop\\idk\\svm_model.pkl') 
-        rf = joblib.load(r'C:\\Users\\Lenovo\\Desktop\\idk\\random_forest_model.pkl')
+        logreg = joblib.load(r'C:\\Users\\Lenovo\\Desktop\\GP\\Logical_Regresion.pkl')
+        svm = joblib.load(r'C:\\Users\\Lenovo\\Desktop\\GP\\svm_model.pkl') 
+        rf = joblib.load(r'C:\\Users\\Lenovo\\Desktop\\GP\\random_forest_model.pkl')
         ensemble = VotingClassifier([
             ('lr', logreg),
             ('svm', svm),

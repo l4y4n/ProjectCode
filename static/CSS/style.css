@@ -55,6 +55,39 @@ button:hover {
     background-color: #333;
 }
 
+body.instruction-page {
+  background-color: #e6f2ff;
+}
+
+.box {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+}
+
+.step {
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: right;
+}
+
+.important-note {
+    margin-top: 30px;
+    color: #d9534f;
+    font-weight: bold;
+}
+
+.home-button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
 /* Responsive Design */
 @media (max-width: 600px) {
     .container {
